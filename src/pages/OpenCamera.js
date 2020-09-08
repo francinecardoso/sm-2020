@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
 
-
 export function OpenCamera() {
     const [hasPermission, setHasPermission] = useState(null);
     const [type, setType] = useState(Camera.Constants.Type.back);
@@ -20,8 +19,6 @@ export function OpenCamera() {
       if (hasPermission === false) {
         return <Text style={{textAlign: 'center'}}>No access to camera</Text>;
     }
-
-
     return (
         <View style={{ flex: 1 }}>
             <Camera
@@ -49,9 +46,6 @@ export function OpenCamera() {
                         <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}> Flip </Text>
                     </TouchableOpacity>
                 </View>
-
-
-
             </Camera>
         </View>
     )
